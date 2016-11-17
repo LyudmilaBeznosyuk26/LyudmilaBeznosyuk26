@@ -1,0 +1,20 @@
+begin
+  with panel1.Canvas do
+  begin
+    Pen.width:=3;
+    Brush.Color:=clBlue;
+    Rectangle(0,700,700,250);
+    Brush.Color:=clLime;
+    Polygon([Point(200,370),Point (450,370),Point(380,430), Point(270,430)]);
+    Brush.Color:=clWhite;
+    Polygon([Point(320,360),Point (320,10),Point(130,360)]);
+    Polygon([Point(340,360),Point (340,100),Point(460,360)]);
+    
+    Ellipse(20,20,90,90);
+    MoveTo(90,55);
+    LineTo(150,55);
+    MoveTo(55,90);
+    LineTo(55,150);
+    MoveTo(80,80);
+    LineTo(130,130);
+    MoveTo(90,55);
