@@ -1,0 +1,83 @@
+unit Unit1;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+  StdCtrls, Unit2;
+
+type
+
+  { TForm1 }
+
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Panel1: TPanel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Panel1Click(Sender: TObject);
+
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.lfm}
+
+{ TForm1 }
+
+
+procedure TForm1.Button1Click(Sender: TObject);
+ begin
+  with Panel1.Canvas do
+   begin
+   Pen.Width:=4;
+   Pen.Color:=clAqua;
+   Ellipse(25,25,125,125);
+   Brush.Color:=clYellow;
+   Ellipse(50,50,70,70);
+   Ellipse(70,50,90,70);
+   Brush.Color:=clAqua;
+   Rectangle(50,125,100,190);
+   
+     MoveTo(100,150);
+     LineTo(130,145);
+     MoveTo(110,120);
+     LineTo(130,145);    //правая рука
+
+
+    
+
+     MoveTo(50,150);
+     LineTo(25,140);   //левая рука
+     MoveTo(25,140);
+     LineTo(35,115);
+
+     MoveTo(63,190);
+     LineTo(63,225);    //ноги
+     MoveTo(80,190);
+     LineTo(80,225);
+
+     MoveTo(63,225);   //мини-ноги
+     LineTo(55,225);
+     MoveTo(80,225);
+     LineTo(88,225);
+   end;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+   Form2.Show;
+end;
+
+
+end.
